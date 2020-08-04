@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  color: #787878; }
+
+.section-outer {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; }
+
+.button {
+  padding: 20px 40px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background-color: #10c9c3;
+  cursor: pointer;
+  color: #ffffff; }
+
+.section-header {
+  background-color: #e9e9e9; }
+  .section-header .section-inner {
+    display: flex;
+    height: 100vh;
+    flex-direction: column; }
+  .section-header__nav {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between; }
+    .section-header__nav-item {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 2;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #191919;
+      transition: 0.2s; }
+      .section-header__nav-item + .section-header__nav-item {
+        margin-left: 25px; }
+      .section-header__nav-item.active, .section-header__nav-item:hover {
+        color: #10c9c3; }
+  .section-header-content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end; }
+    .section-header-content-wrapper {
+      width: 50%; }
+      .section-header-content-wrapper__title {
+        margin-bottom: 30px;
+        font-size: 38px;
+        line-height: 1.3;
+        color: #191919; }
+      .section-header-content-wrapper__subtitle {
+        margin-bottom: 35px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.6; }
+
+.section-about {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .section-about .section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .section-about__title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 2;
+    color: #191919; }
+  .section-about__text {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; }
+
+.section-skills {
+  background: linear-gradient(to right, #f8f9f9 50%, #e9e9e9 50%, #e9e9e9 50%);
+  padding-top: 164px;
+  padding-bottom: 164px; }
+  .section-skills .section-inner {
+    display: flex;
+    flex-direction: column; }
+  .section-skills__title {
+    font-size: 30px;
+    line-height: 2;
+    color: #191919; }
+  .section-skills__skill-progress {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif; }
+    .section-skills__skill-progress .title {
+      font-size: 12px;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #191919; }
+    .section-skills__skill-progress-bar-75, .section-skills__skill-progress-bar-90, .section-skills__skill-progress-bar-65 {
+      position: relative;
+      z-index: 1;
+      width: 45%;
+      height: 3px;
+      margin-top: 10px;
+      margin-bottom: 35px;
+      background-color: #e9e9e9; }
+      .section-skills__skill-progress-bar-75:before, .section-skills__skill-progress-bar-90:before, .section-skills__skill-progress-bar-65:before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 75%;
+        height: 3px;
+        background-color: #10c9c3; }
+    .section-skills__skill-progress-bar-75:before {
+      width: 75%; }
+    .section-skills__skill-progress-bar-90:before {
+      width: 90%; }
+    .section-skills__skill-progress-bar-65:before {
+      width: 65%; }

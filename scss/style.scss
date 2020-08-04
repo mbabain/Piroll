@@ -1,0 +1,238 @@
+// Variables
+
+$color-main: #787878;
+$color-second: #191919;
+$color-third: #10c9c3;
+$color-white: #ffffff;
+
+// / Variables
+
+// Mixins
+
+@mixin font-monteserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin font-nunito-sans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@mixin font-work-sans {
+    font-family: 'Work Sans', sans-serif;
+}
+
+@mixin progress-bar {
+    position: relative;
+    z-index: 1;
+    width: 45%;
+    height: 3px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    background-color: #e9e9e9;
+}
+
+@mixin progress-bar-before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 75%;
+        height: 3px;
+        background-color: $color-third;
+}
+
+// / Mixins
+
+// Common
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-nunito-sans;
+    font-size: 16px;
+    color: $color-main;
+}
+
+.section-outer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    @include font-monteserrat;
+    font-weight: 700;
+}
+
+.button {
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    background-color: #10c9c3;
+    cursor: pointer;
+    color: $color-white;
+}
+
+// / Common
+
+// Header 
+
+.section-header {
+    background-color: #e9e9e9;
+    
+    .section-inner {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    &__nav {
+        display: flex;
+        margin-top: 40px;
+        justify-content: space-between;
+    
+        &-item {
+            @include font-monteserrat;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 2;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-second;
+            transition: 0.2s;
+
+            & + & {
+                margin-left: 25px;
+            }
+
+            &.active,
+            &:hover {
+                color: $color-third;
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-end;
+
+        &-wrapper {
+            width: 50%;
+
+            &__title {
+                margin-bottom: 30px;
+                font-size: 38px;
+                line-height: 1.3;
+                color: $color-second;
+            }
+
+            &__subtitle {
+                margin-bottom: 35px;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+// / Header
+
+// About
+
+.section-about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 30px;
+        line-height: 2;
+        color: $color-second;
+    }
+
+    &__text {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
+
+//  / About
+
+// Skills
+
+.section-skills {
+    background: linear-gradient(to right, #f8f9f9 50%, #e9e9e9 50%, #e9e9e9 50%);
+    padding-top: 164px;
+    padding-bottom: 164px;
+
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 2;
+        color: $color-second;
+    }
+
+    &__skill-progress {
+        display: inline-block;
+        @include font-monteserrat;
+
+        .title {
+            font-size: 12px;
+            line-height: 2;
+            text-transform: uppercase;
+            color: $color-second;
+        }
+        &-bar-75,
+        &-bar-90,
+        &-bar-65 {
+            @include progress-bar;
+
+            &:before {
+                @include progress-bar-before;
+            }
+        }
+        &-bar-75 {
+            &:before {
+                width: 75%;
+            }
+        }
+        &-bar-90 {
+            &:before {
+                width: 90%;
+            }
+        }
+        &-bar-65 {
+            &:before {
+                width: 65%;
+            }
+        }
+    }
+}
