@@ -18,6 +18,7 @@ function watch () {
 
     gulp.watch('./scss/**/*.scss', style);
     gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./js/*.js').on('change', browserSync.reload);
 }
 
 exports.style = style;

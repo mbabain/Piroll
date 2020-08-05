@@ -133,3 +133,165 @@ body {
       width: 90%; }
     .section-skills__skill-progress-bar-65:before {
       width: 65%; }
+
+.section-statistics {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #10c9c3; }
+  .section-statistics .section-inner {
+    display: flex;
+    justify-content: space-between; }
+  .section-statistics-item {
+    display: flex;
+    align-items: center; }
+    .section-statistics-item__icon {
+      margin-right: 25px; }
+    .section-statistics-item__text-number, .section-statistics-item__text-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #ffffff; }
+    .section-statistics-item__text-number {
+      font-size: 18px;
+      margin-bottom: 5px; }
+    .section-statistics-item__text-title {
+      font-size: 12px;
+      text-transform: uppercase; }
+
+.section-works-items {
+  display: flex; }
+
+.section-works-item {
+  position: relative;
+  width: 100%;
+  background-color: #000; }
+  .section-works-item__link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+    transition: 0.2s; }
+  .section-works-item__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.2s; }
+  .section-works-item:hover .section-works-item__img {
+    opacity: 0; }
+  .section-works-item:hover .section-works-item__link {
+    opacity: 1; }
+
+.section-works-button {
+  width: 100%;
+  height: 100px;
+  border: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #f5f5f5;
+  color: #787878;
+  cursor: pointer;
+  transition: 0.1s; }
+  .section-works-button:hover {
+    background-color: #dddddd;
+    color: #383838; }
+
+.section-work-process {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .section-work-process .section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .section-work-process-title {
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #191919; }
+  .section-work-process-text {
+    width: 42%;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 1.5; }
+  .section-work-process-video {
+    width: 100%;
+    height: 60vh; }
+
+.section-services {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f5f5f5; }
+  .section-services-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px; }
+  .section-services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .section-services-item__icon {
+      margin-bottom: 25px; }
+    .section-services-item__title {
+      margin-bottom: 15px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #191919; }
+    .section-services-item__text {
+      width: 80%;
+      font-size: 16px;
+      line-height: 1.5; }
+
+.section-testimonials {
+  background-color: #10c9c3; }
+  .section-testimonials .section-inner {
+    height: 75vh; }
+  .section-testimonials-slider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative; }
+    .section-testimonials-slider__slide {
+      display: none;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center; }
+      .section-testimonials-slider__slide-comment {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 24px;
+        color: #ffffff; }
+      .section-testimonials-slider__slide-author {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff; }
+      .section-testimonials-slider__slide.active {
+        display: block; }
+    .section-testimonials-slider__dots {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translateX(-50%); }
+    .section-testimonials-slider__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.4; }
+      .section-testimonials-slider__dot + .section-testimonials-slider__dot {
+        margin-left: 10px; }
+      .section-testimonials-slider__dot:hover {
+        cursor: pointer; }
+      .section-testimonials-slider__dot.active {
+        width: 10px;
+        height: 10px;
+        opacity: 1; }
