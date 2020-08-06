@@ -110,12 +110,12 @@ body {
     background-color: $color-fourth;
 
     &-menu-background {
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         height: 100vh;
         background-color: $color-main;
-        transition: all 0.2s ease-in;
+        transition: width 0.2s ease-in;
     }
 
     .section-inner {
@@ -147,7 +147,6 @@ body {
         text-transform: uppercase;
         text-decoration: none;
         color: $color-second;
-        transition: 0.2s;
 
         &.active,
         &:hover {
@@ -200,14 +199,12 @@ body {
             right: 0;
             top: 60px;
             flex-direction: column;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.2s ease-in;
         }
 
         &-link {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: end;
+            font-size: 15px;
         }
     }
 }

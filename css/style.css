@@ -35,12 +35,12 @@ body {
 .section-nav {
   background-color: #e9e9e9; }
   .section-nav-menu-background {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
     background-color: #787878;
-    transition: all 0.2s ease-in; }
+    transition: width 0.2s ease-in; }
   .section-nav .section-inner {
     height: 50px; }
   .section-nav-wrapper {
@@ -59,8 +59,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    color: #191919;
-    transition: 0.2s; }
+    color: #191919; }
     .section-nav-link.active, .section-nav-link:hover {
       color: #10c9c3; }
   @media (min-width: 768px) {
@@ -92,13 +91,11 @@ body {
       position: absolute;
       right: 0;
       top: 60px;
-      flex-direction: column;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.2s ease-in; }
+      flex-direction: column; }
     .section-nav-link {
-      margin-bottom: 20px;
-      text-align: end; } }
+      margin-bottom: 25px;
+      text-align: end;
+      font-size: 15px; } }
 
 .section-header {
   background-color: #e9e9e9; }
