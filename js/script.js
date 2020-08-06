@@ -1,6 +1,12 @@
 let index = 0;
 const items = document.querySelectorAll('.section-testimonials-slider__slide');
 const dots = document.querySelectorAll('.section-testimonials-slider__dot');
+const hamburgerMenu = document.querySelector('.section-nav-burger');
+const navigation = document.querySelector('.section-nav-links');
+const hamburgerBackground = document.querySelector('.section-nav-menu-background');
+const hamburgerLine1 = document.getElementById('bar1');
+const hamburgerLine2 = document.getElementById('bar2');
+const hamburgerLine3 = document.getElementById('bar3');
 
 const activeDot = n => {
     for(dot of dots) {
@@ -23,3 +29,25 @@ dots.forEach((item, indexDot) => {
         activeDot(index);
     });
 });
+
+hamburgerMenu.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('active');
+    if (hamburgerMenu.classList.contains('active') == true && window.matchMedia('(max-width: 767px)').matches) {
+        navigation.style.cssText = "visibility: visible; opacity: 1;";
+        hamburgerBackground.style.width = "250px";
+        hamburgerLine1.style.transform = "matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 4)";
+        hamburgerLine2.style.width = "0px";
+        hamburgerLine3.style.transform = "matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, -4)";
+    } else if (hamburgerMenu.classList.contains('active') == false && window.matchMedia('(max-width: 767px)').matches) {
+        navigation.style.cssText = "visibility: hidden; opacity: 0;";
+        hamburgerBackground.style.width = "0px";
+        hamburgerLine1.style.transform = "matrix(1.00,0.00,0.00,1.00,0,0)";
+        hamburgerLine2.style.width = "100%";
+        hamburgerLine3.style.transform = "matrix(1.00,0.00,0.00,1.00,0,0)";
+    } else {
+        navigation.style.cssText = "visibility: visible; opacity: 1;";
+        hamburgerBackground.style.width = "0px";
+    }
+    console.log(hamburgerMenu);
+    console.log(hamburgerLine1);
+})
