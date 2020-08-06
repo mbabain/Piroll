@@ -7,6 +7,16 @@ $color-fourth: #e9e9e9;
 $color-white: #ffffff;
 $color-black: #000000;
 
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: 575px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+
 // / Variables
 
 // Mixins
@@ -79,10 +89,11 @@ body {
     padding: 20px 40px;
     border: none;
     outline: none;
+    font-size: 12px;
     text-transform: uppercase;
-    background-color: $color-third;
     cursor: pointer;
     color: $color-white;
+    background-color: $color-third;
     transition: 0.2s;
 
     &:hover {
@@ -137,7 +148,9 @@ body {
         justify-content: flex-end;
 
         &-wrapper {
-            width: 50%;
+            @media (min-width: $screen-sm) {
+                width: 50%;
+            }
 
             &__title {
                 margin-bottom: 30px;
@@ -255,8 +268,18 @@ body {
     background-color: $color-third;
 
     .section-inner {
-        display: flex;
-        justify-content: space-between;
+        @media (max-width: $screen-xs-max) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &-wrapper {
+        @media (min-width: $screen-sm) {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 
     &-item {
@@ -264,7 +287,13 @@ body {
         align-items: center;
 
         &__icon {
-            margin-right: 25px;
+            @media (max-width: $screen-xs-max) {
+                margin-right: 10px;
+            }
+            
+            @media (min-width: $screen-sm) {
+                margin-right: 25px;
+            }
         }
 
         &__text {
@@ -284,6 +313,11 @@ body {
                 font-size: 12px;
                 text-transform: uppercase;
             }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            align-self: flex-start;
+            margin-bottom: 30px;
         }
     }
 }
@@ -391,9 +425,15 @@ body {
     background-color: $color-fourth;
 
     &-items {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 55px;
+        @media (min-width: $screen-sm) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 55px;
+        }
+        @media (max-width: $screen-xs-max) {
+            width: 70%;
+            margin: 0 auto;
+        }
     }
 
     &-item {
@@ -417,6 +457,9 @@ body {
             width: 80%;
             font-size: 16px;
             line-height: 1.5;
+        }
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 55px;
         }
     }
 }
@@ -509,7 +552,20 @@ body {
     .section-inner {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: $screen-xs-max) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
+
+    &-item {
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 20px;
+        }
+    }
+
+
 }
 
 // / Clients
@@ -604,7 +660,16 @@ body {
 
     .section-inner {
         display: flex;
-        justify-content: space-between;
+
+        @media (max-width: $screen-sm-max) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: $screen-md) {
+            justify-content: space-between;
+        }
     }
 
     .item {
@@ -619,6 +684,10 @@ body {
         &:last-child {
             margin-bottom: 0;
         }
+
+        @media (max-width: $screen-sm-max) {
+            align-self: flex-start;
+        }
     }
 
     &-copyright {
@@ -629,7 +698,9 @@ body {
         }
 
         &__text {
-            width: 60%;
+            @media (min-width: $screen-md) {
+                width: 60%;
+            }
         }
     }
 
@@ -673,6 +744,14 @@ body {
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    &-copyright,
+    &-contacts,
+    &-nav {
+        @media (max-width: $screen-sm-max) {
+            margin-bottom: 35px;
         }
     }
 }
