@@ -60,7 +60,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     if (pageYOffset > 40) {
-    hamburgerMenu.classList.toggle('active');
+    hamburgerMenu.classList.remove('active');
     navigation.style.cssText = "visibility: hidden; opacity: 0;";
     activeOff();
     }
@@ -76,6 +76,5 @@ window.addEventListener(`resize`, event => {
         hamburgerMenu.classList.remove('active');
         navigation.style.cssText = "visibility: hidden; opacity: 0;";
         hamburgerBackground.style.width = "0px";
-        console.log(1);
     }
 });
