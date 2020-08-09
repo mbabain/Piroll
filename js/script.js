@@ -59,7 +59,7 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-    if (pageYOffset > 40) {
+    if (pageYOffset > 40 && window.matchMedia('(max-width: 767px)').matches) {
     hamburgerMenu.classList.remove('active');
     navigation.style.cssText = "visibility: hidden; opacity: 0;";
     activeOff();
